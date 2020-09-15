@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import axios from 'axios';
+import Search from './Components/Search'
+import WatchList from './Components/WatchList'
+
 
 function App() {
+const [currentView, setCurrentView] = useState(false);
+
+function currentViewHandler() {
+  if(!currentView) {
+    setCurrentView(true)
+  } else {
+    setCurrentView(false)
+  }
+}
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <img className="header-logo" src="https://i.ibb.co/D7NNByG/movie-dpng.png" alt="movie-dpng"/>
+      <input type="button"onClick={currentViewHandler} value="Watch List"/>
+      {currentView ? <WatchList setCurrentView={setCurrentView} currentViewHandler={currentViewHandler}/> : <Search/>}
     </div>
   );
 }
 
 export default App;
+
