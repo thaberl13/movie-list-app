@@ -3,25 +3,39 @@ import axios from 'axios';
 
 
 export default function WatchList({currentViewHandler, setCurrentView}) {
-const[watchList, setWatchList] = useState('');
+const[watchedMovie, setWatchMovie] = useState([]);
 
-useEffect( ()=>{
-  fetch('http://localhost:4000/watchlist')
-  .then(response=>{
-    return response.json()
-  }).then(result=>{
-    console.log(result)
+
+
+//fetch watched movies to display;
+useEffect(async ()=>{
+  axios.get('https://movie-list-staging.herokuapp.com/watchlist')
+  .then(result=>{
+    result.data.splice(0,1)
+    return setWatchMovie(result.data)
   })
-
 },[])
+
+
 
 
 
 
   return (
     <>
-    <h1>This is the watchlist page</h1>
-    <input type="button" onClick={currentViewHandler} value="switch it back"/>
+    <div id="movie-container">
+      {watchedMovie.map((movie, index) => ( 
+    <div className="each-movie" key={index}>
+  <ul className="movie-cell">
+  <img className="movie-cover-image" src={`https://image.tmdb.org/t/p/w500` + movie.poster_path}/>
+    {movie.title} <br />
+    {/* Overview:{movie.overview} <br/> */}
+    Release Date: {movie.release_date} <br/>
+    Average Rating: {movie.vote_average} <br/>
+    User Voter Count: {movie.vote_count}
+  </ul>
+  </div>))}
+  </div>
     </>
   )
 }
