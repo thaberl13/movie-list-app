@@ -17,23 +17,26 @@ async function fetchMovie() {
 
 // }
 
-async function fetchDb(movie) {
+function fetchDb(movie) {
   console.log(movie)
-  await axios.post('https://movie-list-staging.herokuapp.com/watchlist', {
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  console.log(proxyurl + 'https://movie-list-staging.herokuapp.com/watchlist')
+    axios.post(proxyurl + 'https://movie-list-staging.herokuapp.com/watchlist',  {
     "title": movie.title,
     "overview": movie.overview,
     "release_date": movie.release_date,
     "poster_path": movie.poster_path,
     "vote_avg": movie.vote_average,
     "vote_count": movie.vote_count,
-    "backdrop_path": movie.backdrop_path
-  }).then(function (res) {
-    console.log('yes')
-    return console.log(res)
+    "backdrop_path": movie.backdrop_path,
   })
-  .catch(function (error) {
-    console.log(error);
-  });
+  // .then(function (res) {
+  //   console.log('yes')
+  //   return console.log(res)
+  // })
+  // .catch(function (error) {
+  //   console.log(error);
+  // });
 }
 
 
