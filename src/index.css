@@ -14,6 +14,7 @@ code {
 }
 
 .header-logo{
+  margin-left: 30px;
   height:100px;
 }
 
@@ -61,10 +62,16 @@ code {
 
 #search-button{
   margin-top: 20px;
+  margin-right: 200px;
   display: inline-flex;
 }
 
 #search-input{
+  margin-left: 300px;
   justify-content: center;
   display: inline-flex;
+}
+
+#watch-list-button{
+  margin-left:15px;
 }

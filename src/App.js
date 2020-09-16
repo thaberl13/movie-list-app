@@ -19,8 +19,8 @@ function currentViewHandler() {
   return (
     <div className="App">
      <img className="header-logo" src="https://i.ibb.co/vd1XGDj/movie-list-logo-png.png" alt="movie-dpng"/>
-      <input type="button"onClick={currentViewHandler} value="Watch List"/>
-      {currentView ? <WatchList setCurrentView={setCurrentView} currentViewHandler={currentViewHandler}/> : <Search/>}
+      {/* <input type="button" onClick={currentViewHandler} value="Watch List"/> */}
+      {currentView ? <WatchList setCurrentView={setCurrentView} currentViewHandler={currentViewHandler}/> : <Search WatchList={WatchList} currentViewHandler={currentViewHandler} currentView={currentView} setCurrentView={setCurrentView}/>}
     </div>
   );
 }

@@ -1,26 +1,23 @@
 import React, {useState, useRef} from 'react';
 import axios from 'axios';
 
-export default function Search() {
+export default function Search({setCurrentView, currentViewHandler, currentView, WatchList}) {
 const[text, setText] =useState("");
 const [searchedMovie, setSearchedMovie] = useState([]);
 const[movieToSave, setMovieToSave] = useState([]);
 
 
+
+//initial fetch call to search for movies
 async function fetchMovie() {
   let res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=b0cc5bf59e460eccc495f44a91a8ba91&language=en-US&query=${text}&page=1&include_adult=false`);
   setSearchedMovie(res.data.results)
 }
 
-// function addToWatchListHandler(movie) {
-//   console.log(movie)
-
-// }
-
+//post request to store selected movie
 function fetchDb(movie) {
   console.log(movie)
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  console.log(proxyurl + 'https://movie-list-staging.herokuapp.com/watchlist')
     axios.post(proxyurl + 'https://movie-list-staging.herokuapp.com/watchlist',  {
     "title": movie.title,
     "overview": movie.overview,
@@ -30,13 +27,6 @@ function fetchDb(movie) {
     "vote_count": movie.vote_count,
     "backdrop_path": movie.backdrop_path,
   })
-  // .then(function (res) {
-  //   console.log('yes')
-  //   return console.log(res)
-  // })
-  // .catch(function (error) {
-  //   console.log(error);
-  // });
 }
 
 
@@ -51,6 +41,7 @@ function fetchDb(movie) {
 
        {/* Navbar class */}
       <div id="nav-bar">
+      <input type="button" id="watch-list-button" value="Watch-List" onClick={currentViewHandler}></input>
       <input type="text" id="search-input" onChange={(e)=>{
         setText(e.target.value)
       }}/>
@@ -68,7 +59,7 @@ function fetchDb(movie) {
     Release Date: {movie.release_date} <br/>
     Average Rating: {movie.vote_average} <br/>
     User Voter Count: {movie.vote_count}
-    <input type="button" value="Add to Watch-list" onClick={()=>{
+    <input type="button" id="search-button" value="Add to Watch-list" onClick={()=>{
       // setMovieToSave(index)
     fetchDb(searchedMovie[index]);
   }} />
