@@ -59,7 +59,7 @@ function fetchDb(movie) {
     Release Date: {movie.release_date} <br/>
     Average Rating: {movie.vote_average} <br/>
     User Voter Count: {movie.vote_count}
-    <input type="button" id="search-button" value="Add to Watch-list" onClick={()=>{
+    <input type="button" id="add-to-watch-list-button" value="Add to Watch-list" onClick={()=>{
       // setMovieToSave(index)
     fetchDb(searchedMovie[index]);
     alert('Movie added to your Watch-List');
