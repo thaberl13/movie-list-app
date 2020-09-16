@@ -8,10 +8,11 @@ const[watchedMovie, setWatchMovie] = useState([]);
 
 
 //fetch watched movies to display;
-useEffect(async ()=>{
+useEffect(()=>{
   axios.get('https://movie-list-staging.herokuapp.com/watchlist')
   .then(result=>{
     result.data.splice(0,13)
+    console.log(result.data)
     return setWatchMovie(result.data)
   })
 },[])
