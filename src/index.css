@@ -1,9 +1,7 @@
 body {
   background-color: white;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,6 +9,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+#watch-list-image{
+  margin-left: 225px;
+  height:200px;
+  width:200px;
 }
 
 .header-logo{
@@ -55,23 +58,66 @@ code {
   height: 75px;
   padding: none;
   justify-content: space-between;
-  position: fixed;
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11), 0 4px 15px 0 rgba(0, 0, 0, 0.103);
 }
 
 #search-button{
-  margin-top: 20px;
-  margin-right: 200px;
-  display: inline-flex;
+margin-top: 20px;
+margin-right: 200px;
+display: inline-flex;
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: gray;
+padding: 10px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+cursor: pointer;
 }
 
-#search-input{
+#search-button:hover{
+  background: #434343;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+cursor: pointer;
+}
+
+#search-input[type=text]{
   margin-left: 300px;
   justify-content: center;
   display: inline-flex;
+  background-color: lightgray;
+  color: white;
+  height: 30px;
 }
 
 #watch-list-button{
-  margin-left:15px;
+margin-top:20px;
+margin-left:20px;
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: gray;
+padding: 10px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+cursor: pointer;
+}
+
+#watch-list-button:hover{
+  background: #434343;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+cursor: pointer;
 }

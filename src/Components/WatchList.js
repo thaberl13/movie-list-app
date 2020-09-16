@@ -24,6 +24,7 @@ useEffect(()=>{
 
   return (
     <>
+    <img id="watch-list-image" src="https://i.ibb.co/fF99w34/Screen-Shot-2020-09-16-at-2-02-28-PM.png"/>
     <div id="movie-container">
       {watchedMovie.map((movie, index) => ( 
     <div className="each-movie" key={index}>
@@ -40,3 +41,4 @@ useEffect(()=>{
     </>
   )
 }
+

@@ -62,6 +62,7 @@ function fetchDb(movie) {
     <input type="button" id="search-button" value="Add to Watch-list" onClick={()=>{
       // setMovieToSave(index)
     fetchDb(searchedMovie[index]);
+    alert('Movie added to your Watch-List');
   }} />
   </ul>
   </div>))}
