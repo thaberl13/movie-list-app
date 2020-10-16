@@ -1,6 +1,6 @@
 # 🎬 🎥 Movie-List 🎥 🎬 
 
-## Search Movies and add them from your watch-list
+## Search Movies and add them to your watch-list
 ### Scroll through your favorite movies
 #### Rating system being implemented soon...
 
@@ -9,7 +9,7 @@
 
 ## 🎬 Search and add movies to your own personalized watch list 🎬
 
-## Backend is deployed on Heroku
+## RESTful Express server is deployed on Heroku
 
 ## Frontend deployed on Vercel
 
