@@ -1,4 +1,4 @@
-# 🎬 🎥 Movie-List 🎥 🎬 
+# 🎬 🎥 Movie'd 🎥 🎬 
 
 ## Search Movies and add them to your watch-list
 ### Scroll through your favorite movies
