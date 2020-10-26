@@ -7,7 +7,7 @@ Movie'd is a movie search engine that let's users add and store movies to their 
 
 
 ### Scroll through your favorite movies
-<img src="https://ibb.co/Fw3DHVY"><img src="https://i.ibb.co/J7ts3Qp/Screen-Shot-2020-10-26-at-5-13-42-PM.png" border="10"></a><br /><a target='_blank' href='https://statewideinventory.org/subaru-0-60-times'></a>
+<img src="https://ibb.co/Fw3DHVY"><img src="https://i.ibb.co/J7ts3Qp/Screen-Shot-2020-10-26-at-5-13-42-PM.png" border="10"></a><br />
 #### Rating system being implemented soon...
 
 
