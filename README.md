@@ -3,10 +3,10 @@
 Movie'd is a movie search engine that let's users add and store movies to their watch lists. Built using React.js, Postgres, Express, and K'nex.
 
 ## Search Movies and add them to your watch-list
-<img src="https://ibb.co/Fw3DHVY"><img src="https://i.ibb.co/Prrm8yK/Screen-Shot-2020-10-26-at-5-12-59-PM.png" border="10">
+<img src="https://i.ibb.co/Prrm8yK/Screen-Shot-2020-10-26-at-5-12-59-PM.png" border="10">
 
 ### Scroll through your favorite movies
-<img src="https://ibb.co/Fw3DHVY"><img src="https://i.ibb.co/J7ts3Qp/Screen-Shot-2020-10-26-at-5-13-42-PM.png" border="10">
+<img src="https://i.ibb.co/J7ts3Qp/Screen-Shot-2020-10-26-at-5-13-42-PM.png" border="10">
 #### Rating system being implemented soon...
 
 
